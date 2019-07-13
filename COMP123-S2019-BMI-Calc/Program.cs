@@ -16,7 +16,7 @@ namespace COMP123_S2019_BMI_Calc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculatorForm());
+            Application.Run(new BMICalculator());
         }
     }
 }
