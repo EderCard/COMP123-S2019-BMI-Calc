@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BMICalculatorTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ImperialRadioButton = new System.Windows.Forms.RadioButton();
             this.HeightLabel = new System.Windows.Forms.Label();
@@ -41,8 +42,9 @@
             this.WeightUnitLabel = new System.Windows.Forms.Label();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.ResultProgressBar = new System.Windows.Forms.ProgressBar();
-            this.MetricRadioButton = new System.Windows.Forms.RadioButton();
             this.HeightUnitLabel = new System.Windows.Forms.Label();
+            this.MetricRadioButton = new System.Windows.Forms.RadioButton();
+            this.ResultTimer = new System.Windows.Forms.Timer(this.components);
             this.BMICalculatorTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -242,6 +244,17 @@
             this.ResultProgressBar.Size = new System.Drawing.Size(293, 24);
             this.ResultProgressBar.TabIndex = 8;
             // 
+            // HeightUnitLabel
+            // 
+            this.HeightUnitLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.HeightUnitLabel.AutoSize = true;
+            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeightUnitLabel, 2);
+            this.HeightUnitLabel.Location = new System.Drawing.Point(181, 86);
+            this.HeightUnitLabel.Name = "HeightUnitLabel";
+            this.HeightUnitLabel.Size = new System.Drawing.Size(95, 31);
+            this.HeightUnitLabel.TabIndex = 5;
+            this.HeightUnitLabel.Text = "Inches";
+            // 
             // MetricRadioButton
             // 
             this.MetricRadioButton.AutoSize = true;
@@ -255,16 +268,10 @@
             this.MetricRadioButton.UseVisualStyleBackColor = true;
             this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
             // 
-            // HeightUnitLabel
+            // ResultTimer
             // 
-            this.HeightUnitLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.HeightUnitLabel.AutoSize = true;
-            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeightUnitLabel, 2);
-            this.HeightUnitLabel.Location = new System.Drawing.Point(181, 86);
-            this.HeightUnitLabel.Name = "HeightUnitLabel";
-            this.HeightUnitLabel.Size = new System.Drawing.Size(95, 31);
-            this.HeightUnitLabel.TabIndex = 5;
-            this.HeightUnitLabel.Text = "Inches";
+            this.ResultTimer.Interval = 1;
+            this.ResultTimer.Tick += new System.EventHandler(this.ResultTimer_Tick);
             // 
             // BMICalculator
             // 
@@ -302,6 +309,7 @@
         private System.Windows.Forms.ProgressBar ResultProgressBar;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button CalculateButton;
+        private System.Windows.Forms.Timer ResultTimer;
     }
 }
 

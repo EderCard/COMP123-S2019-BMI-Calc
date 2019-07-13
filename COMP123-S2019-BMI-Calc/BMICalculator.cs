@@ -21,6 +21,7 @@ namespace COMP123_S2019_BMI_Calc
         double Height;
         double Weight;
         double BMI;
+        int bmiLevel;
         public BMICalculator()
         {
             InitializeComponent();
@@ -62,6 +63,8 @@ namespace COMP123_S2019_BMI_Calc
             HeigthTextBox.Text = string.Empty;
             WeigthTextBox.Text = string.Empty;
             ResultTextBox.Text = string.Empty;
+            ResultProgressBar.Value = 0;
+            ResultTimer.Stop();
         }
         /// <summary>
         /// This is the Event Handler for the CalculateButton click event
@@ -70,23 +73,37 @@ namespace COMP123_S2019_BMI_Calc
         /// <param name="e"></param>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            BMI = CalculateBMI(Height, Weight);
-            ResultTextBox.Text = BMI.ToString();
-            if (BMI <= 18.5)
+            try
             {
-                ResultTextBox.BackColor = Color.Gold;
+                BMI = CalculateBMI(Height, Weight);
+                ResultTimer.Start();
+                ResultTextBox.Text = BMI.ToString();
+                ResultProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+                if (BMI <= 18.5)
+                {
+                    ResultProgressBar.ForeColor = Color.Gold;
+                    bmiLevel = 1;
+                }
+                else if (BMI <= 24.9)
+                {
+                    ResultProgressBar.ForeColor = Color.LimeGreen;
+                    bmiLevel = 2;
+                }
+                else if (BMI <= 29.9)
+                {
+                    ResultProgressBar.ForeColor = Color.DarkOrange;
+                    bmiLevel = 3;
+                }
+                else if (BMI >= 30)
+                {
+                    ResultProgressBar.ForeColor = Color.DarkRed;
+                    bmiLevel = 4;
+                }
+                ResultProgressBar.Value = 0;
             }
-            else if (BMI <= 24.9)
+            catch
             {
-                ResultTextBox.BackColor = Color.LightGreen;
-            }
-            else if (BMI <= 29.9)
-            {
-                ResultTextBox.BackColor = Color.Orange;
-            }
-            else if (BMI >= 30)
-            {
-                ResultTextBox.BackColor = Color.Tomato;
+                MessageBox.Show("You must provide Height and Weight to \ncalculate your BMI - Body Mass Index");
             }
         }
         /// <summary>
@@ -108,6 +125,45 @@ namespace COMP123_S2019_BMI_Calc
                 BMI = Math.Round(Weight / Math.Pow(Height / 100, 2), 1);
             }
             return BMI;
+        }
+        /// <summary>
+        /// This is the TimerTick event that stops the ProgressBar in each BMI level
+        /// There are four levels os BMI
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ResultTimer_Tick(object sender, EventArgs e)
+        {
+            ResultProgressBar.Increment(1);
+
+            if (bmiLevel == 1)
+            {
+                if (ResultProgressBar.Value == 25)
+                {
+                    ResultTimer.Stop();
+                }
+            }
+            if (bmiLevel == 2)
+            {
+                if (ResultProgressBar.Value == 50)
+                {
+                    ResultTimer.Stop();
+                }
+            }
+            if (bmiLevel == 3)
+            {
+                if (ResultProgressBar.Value == 75)
+                {
+                    ResultTimer.Stop();
+                }
+            }
+            if (bmiLevel == 4)
+            {
+                if (ResultProgressBar.Value == 100)
+                {
+                    ResultTimer.Stop();
+                }
+            }
         }
     }
 }
