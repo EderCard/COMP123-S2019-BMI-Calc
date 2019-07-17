@@ -165,5 +165,14 @@ namespace COMP123_S2019_BMI_Calc
                 }
             }
         }
+        /// <summary>
+        /// This is the event handler for the closing form event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BMICalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
