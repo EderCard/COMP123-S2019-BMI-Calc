@@ -35,15 +35,15 @@
             this.HeigthTextBox = new System.Windows.Forms.TextBox();
             this.WeigthTextBox = new System.Windows.Forms.TextBox();
             this.WeightLabel = new System.Windows.Forms.Label();
-            this.ScaleTextBox = new System.Windows.Forms.TextBox();
             this.ResetButton = new System.Windows.Forms.Button();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.ResultLabel = new System.Windows.Forms.Label();
             this.WeightUnitLabel = new System.Windows.Forms.Label();
-            this.ResultTextBox = new System.Windows.Forms.TextBox();
-            this.ResultProgressBar = new System.Windows.Forms.ProgressBar();
             this.HeightUnitLabel = new System.Windows.Forms.Label();
             this.MetricRadioButton = new System.Windows.Forms.RadioButton();
+            this.ResultProgressBar = new System.Windows.Forms.ProgressBar();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.ScaleTextBox = new System.Windows.Forms.TextBox();
             this.ResultTimer = new System.Windows.Forms.Timer(this.components);
             this.BMICalculatorTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -51,40 +51,43 @@
             // BMICalculatorTableLayoutPanel
             // 
             this.BMICalculatorTableLayoutPanel.ColumnCount = 5;
-            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.04682F));
-            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.41806F));
-            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.1076F));
+            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.12239F));
+            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.55481F));
+            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.1076F));
+            this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.1076F));
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.ImperialRadioButton, 0, 0);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.HeightLabel, 0, 1);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.HeigthTextBox, 1, 2);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.WeigthTextBox, 1, 4);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.WeightLabel, 0, 3);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ScaleTextBox, 0, 8);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResetButton, 0, 5);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.CalculateButton, 2, 5);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResultLabel, 0, 6);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResetButton, 0, 6);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.CalculateButton, 2, 6);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResultLabel, 0, 8);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.WeightUnitLabel, 3, 4);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResultTextBox, 3, 6);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResultProgressBar, 3, 6);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.HeightUnitLabel, 3, 2);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.MetricRadioButton, 3, 0);
-            this.BMICalculatorTableLayoutPanel.Location = new System.Drawing.Point(2, 3);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResultProgressBar, 2, 9);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResultTextBox, 3, 8);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.ScaleTextBox, 0, 12);
+            this.BMICalculatorTableLayoutPanel.Location = new System.Drawing.Point(2, 12);
             this.BMICalculatorTableLayoutPanel.Name = "BMICalculatorTableLayoutPanel";
-            this.BMICalculatorTableLayoutPanel.RowCount = 5;
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
+            this.BMICalculatorTableLayoutPanel.RowCount = 13;
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.BMICalculatorTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BMICalculatorTableLayoutPanel.Size = new System.Drawing.Size(299, 436);
+            this.BMICalculatorTableLayoutPanel.Size = new System.Drawing.Size(301, 417);
             this.BMICalculatorTableLayoutPanel.TabIndex = 0;
             // 
             // ImperialRadioButton
@@ -94,7 +97,7 @@
             this.ImperialRadioButton.Location = new System.Drawing.Point(3, 3);
             this.ImperialRadioButton.Name = "ImperialRadioButton";
             this.ImperialRadioButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.ImperialRadioButton.Size = new System.Drawing.Size(143, 35);
+            this.ImperialRadioButton.Size = new System.Drawing.Size(143, 34);
             this.ImperialRadioButton.TabIndex = 1;
             this.ImperialRadioButton.TabStop = true;
             this.ImperialRadioButton.Text = "Imperial";
@@ -106,11 +109,12 @@
             this.HeightLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.HeightLabel.AutoSize = true;
             this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeightLabel, 3);
-            this.HeightLabel.Location = new System.Drawing.Point(3, 51);
+            this.HeightLabel.Location = new System.Drawing.Point(3, 49);
             this.HeightLabel.Name = "HeightLabel";
             this.HeightLabel.Size = new System.Drawing.Size(136, 31);
             this.HeightLabel.TabIndex = 4;
             this.HeightLabel.Text = "My Height";
+            this.HeightLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // HeigthTextBox
             // 
@@ -118,7 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeigthTextBox, 2);
-            this.HeigthTextBox.Location = new System.Drawing.Point(63, 85);
+            this.HeigthTextBox.Location = new System.Drawing.Point(63, 83);
             this.HeigthTextBox.Name = "HeigthTextBox";
             this.HeigthTextBox.Size = new System.Drawing.Size(112, 38);
             this.HeigthTextBox.TabIndex = 3;
@@ -146,24 +150,7 @@
             this.WeightLabel.Size = new System.Drawing.Size(141, 31);
             this.WeightLabel.TabIndex = 4;
             this.WeightLabel.Text = "My Weight";
-            // 
-            // ScaleTextBox
-            // 
-            this.ScaleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.ScaleTextBox, 5);
-            this.ScaleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScaleTextBox.Location = new System.Drawing.Point(3, 323);
-            this.ScaleTextBox.Multiline = true;
-            this.ScaleTextBox.Name = "ScaleTextBox";
-            this.BMICalculatorTableLayoutPanel.SetRowSpan(this.ScaleTextBox, 2);
-            this.ScaleTextBox.Size = new System.Drawing.Size(293, 110);
-            this.ScaleTextBox.TabIndex = 7;
-            this.ScaleTextBox.Text = "BMI SCALE    RESULT\r\nUnderweight   Less than 18.5\r\nNormal             Between 18." +
-    "5 and 24.9\r\nOverweight      Between 25 and 29.9\r\nObese              30 or greate" +
-    "r";
-            this.ScaleTextBox.UseWaitCursor = true;
+            this.WeightLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // ResetButton
             // 
@@ -173,9 +160,9 @@
             this.ResetButton.BackColor = System.Drawing.Color.Goldenrod;
             this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.ResetButton, 2);
             this.ResetButton.ForeColor = System.Drawing.Color.White;
-            this.ResetButton.Location = new System.Drawing.Point(3, 202);
+            this.ResetButton.Location = new System.Drawing.Point(3, 213);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(96, 46);
+            this.ResetButton.Size = new System.Drawing.Size(96, 44);
             this.ResetButton.TabIndex = 9;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = false;
@@ -189,9 +176,9 @@
             this.CalculateButton.BackColor = System.Drawing.Color.SteelBlue;
             this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.CalculateButton, 3);
             this.CalculateButton.ForeColor = System.Drawing.Color.White;
-            this.CalculateButton.Location = new System.Drawing.Point(105, 202);
+            this.CalculateButton.Location = new System.Drawing.Point(105, 213);
             this.CalculateButton.Name = "CalculateButton";
-            this.CalculateButton.Size = new System.Drawing.Size(191, 46);
+            this.CalculateButton.Size = new System.Drawing.Size(193, 44);
             this.CalculateButton.TabIndex = 9;
             this.CalculateButton.Text = "Calculate BMI";
             this.CalculateButton.UseVisualStyleBackColor = false;
@@ -202,11 +189,12 @@
             this.ResultLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ResultLabel.AutoSize = true;
             this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.ResultLabel, 3);
-            this.ResultLabel.Location = new System.Drawing.Point(14, 255);
+            this.ResultLabel.Location = new System.Drawing.Point(14, 274);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.Size = new System.Drawing.Size(161, 31);
             this.ResultLabel.TabIndex = 4;
             this.ResultLabel.Text = "Your BMI is:";
+            this.ResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // WeightUnitLabel
             // 
@@ -218,6 +206,43 @@
             this.WeightUnitLabel.Size = new System.Drawing.Size(106, 31);
             this.WeightUnitLabel.TabIndex = 5;
             this.WeightUnitLabel.Text = "Pounds";
+            this.WeightUnitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // HeightUnitLabel
+            // 
+            this.HeightUnitLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.HeightUnitLabel.AutoSize = true;
+            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeightUnitLabel, 2);
+            this.HeightUnitLabel.Location = new System.Drawing.Point(181, 84);
+            this.HeightUnitLabel.Name = "HeightUnitLabel";
+            this.HeightUnitLabel.Size = new System.Drawing.Size(95, 31);
+            this.HeightUnitLabel.TabIndex = 5;
+            this.HeightUnitLabel.Text = "Inches";
+            this.HeightUnitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // MetricRadioButton
+            // 
+            this.MetricRadioButton.AutoSize = true;
+            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.MetricRadioButton, 2);
+            this.MetricRadioButton.Location = new System.Drawing.Point(181, 3);
+            this.MetricRadioButton.Name = "MetricRadioButton";
+            this.MetricRadioButton.Size = new System.Drawing.Size(106, 34);
+            this.MetricRadioButton.TabIndex = 2;
+            this.MetricRadioButton.TabStop = true;
+            this.MetricRadioButton.Text = "Metric";
+            this.MetricRadioButton.UseVisualStyleBackColor = true;
+            this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
+            // 
+            // ResultProgressBar
+            // 
+            this.ResultProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.ResultProgressBar, 5);
+            this.ResultProgressBar.Location = new System.Drawing.Point(3, 323);
+            this.ResultProgressBar.Name = "ResultProgressBar";
+            this.ResultProgressBar.Size = new System.Drawing.Size(295, 34);
+            this.ResultProgressBar.TabIndex = 8;
             // 
             // ResultTextBox
             // 
@@ -226,47 +251,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ResultTextBox.BackColor = System.Drawing.Color.LightGray;
             this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.ResultTextBox, 2);
+            this.ResultTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.ResultTextBox.Enabled = false;
-            this.ResultTextBox.Location = new System.Drawing.Point(181, 254);
+            this.ResultTextBox.Location = new System.Drawing.Point(181, 273);
             this.ResultTextBox.Name = "ResultTextBox";
-            this.ResultTextBox.Size = new System.Drawing.Size(115, 38);
+            this.ResultTextBox.Size = new System.Drawing.Size(117, 38);
             this.ResultTextBox.TabIndex = 3;
             this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // ResultProgressBar
+            // ScaleTextBox
             // 
-            this.ResultProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.ResultProgressBar, 5);
-            this.ResultProgressBar.Location = new System.Drawing.Point(3, 293);
-            this.ResultProgressBar.Name = "ResultProgressBar";
-            this.ResultProgressBar.Size = new System.Drawing.Size(293, 24);
-            this.ResultProgressBar.TabIndex = 8;
-            // 
-            // HeightUnitLabel
-            // 
-            this.HeightUnitLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.HeightUnitLabel.AutoSize = true;
-            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeightUnitLabel, 2);
-            this.HeightUnitLabel.Location = new System.Drawing.Point(181, 86);
-            this.HeightUnitLabel.Name = "HeightUnitLabel";
-            this.HeightUnitLabel.Size = new System.Drawing.Size(95, 31);
-            this.HeightUnitLabel.TabIndex = 5;
-            this.HeightUnitLabel.Text = "Inches";
-            // 
-            // MetricRadioButton
-            // 
-            this.MetricRadioButton.AutoSize = true;
-            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.MetricRadioButton, 2);
-            this.MetricRadioButton.Location = new System.Drawing.Point(181, 3);
-            this.MetricRadioButton.Name = "MetricRadioButton";
-            this.MetricRadioButton.Size = new System.Drawing.Size(106, 35);
-            this.MetricRadioButton.TabIndex = 2;
-            this.MetricRadioButton.TabStop = true;
-            this.MetricRadioButton.Text = "Metric";
-            this.MetricRadioButton.UseVisualStyleBackColor = true;
-            this.MetricRadioButton.CheckedChanged += new System.EventHandler(this.MetricRadioButton_CheckedChanged);
+            this.ScaleTextBox.BackColor = System.Drawing.Color.LightGray;
+            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.ScaleTextBox, 5);
+            this.ScaleTextBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ScaleTextBox.Location = new System.Drawing.Point(3, 373);
+            this.ScaleTextBox.Name = "ScaleTextBox";
+            this.ScaleTextBox.Size = new System.Drawing.Size(295, 38);
+            this.ScaleTextBox.TabIndex = 10;
+            this.ScaleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ResultTimer
             // 
@@ -304,13 +306,13 @@
         private System.Windows.Forms.TextBox WeigthTextBox;
         private System.Windows.Forms.Label WeightLabel;
         private System.Windows.Forms.Label WeightUnitLabel;
-        private System.Windows.Forms.TextBox ScaleTextBox;
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.TextBox ResultTextBox;
-        private System.Windows.Forms.ProgressBar ResultProgressBar;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Timer ResultTimer;
+        private System.Windows.Forms.ProgressBar ResultProgressBar;
+        private System.Windows.Forms.TextBox ScaleTextBox;
     }
 }
 

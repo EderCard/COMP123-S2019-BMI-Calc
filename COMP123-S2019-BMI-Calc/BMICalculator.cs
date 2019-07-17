@@ -21,7 +21,7 @@ namespace COMP123_S2019_BMI_Calc
         double Height;
         double Weight;
         double BMI;
-        int bmiLevel;
+        private int bmiLevel;
         public BMICalculator()
         {
             InitializeComponent();
@@ -83,21 +83,37 @@ namespace COMP123_S2019_BMI_Calc
                 {
                     ResultProgressBar.ForeColor = Color.Gold;
                     bmiLevel = 1;
+                    ScaleTextBox.Text = "Underweight";
+                    ScaleTextBox.BackColor= Color.Gold;
+                    ScaleTextBox.ForeColor = Color.White;
+                    ScaleTextBox.Font= new Font(this.Font, FontStyle.Bold);
                 }
                 else if (BMI <= 24.9)
                 {
                     ResultProgressBar.ForeColor = Color.LimeGreen;
                     bmiLevel = 2;
+                    ScaleTextBox.Text = "Normal";
+                    ScaleTextBox.BackColor = Color.LimeGreen;
+                    ScaleTextBox.ForeColor = Color.White;
+                    ScaleTextBox.Font = new Font(this.Font, FontStyle.Bold);
                 }
                 else if (BMI <= 29.9)
                 {
                     ResultProgressBar.ForeColor = Color.DarkOrange;
                     bmiLevel = 3;
+                    ScaleTextBox.Text = "Overweight";
+                    ScaleTextBox.BackColor = Color.DarkOrange;
+                    ScaleTextBox.ForeColor = Color.White;
+                    ScaleTextBox.Font = new Font(this.Font, FontStyle.Bold);
                 }
                 else if (BMI >= 30)
                 {
                     ResultProgressBar.ForeColor = Color.DarkRed;
                     bmiLevel = 4;
+                    ScaleTextBox.Text = "Obese";
+                    ScaleTextBox.BackColor = Color.DarkRed;
+                    ScaleTextBox.ForeColor = Color.White;
+                    ScaleTextBox.Font = new Font(this.Font, FontStyle.Bold);
                 }
                 ResultProgressBar.Value = 0;
             }
