@@ -32,8 +32,8 @@
             this.BMICalculatorTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ImperialRadioButton = new System.Windows.Forms.RadioButton();
             this.HeightLabel = new System.Windows.Forms.Label();
-            this.HeigthTextBox = new System.Windows.Forms.TextBox();
-            this.WeigthTextBox = new System.Windows.Forms.TextBox();
+            this.HeightTextBox = new System.Windows.Forms.TextBox();
+            this.WeightTextBox = new System.Windows.Forms.TextBox();
             this.WeightLabel = new System.Windows.Forms.Label();
             this.ResetButton = new System.Windows.Forms.Button();
             this.CalculateButton = new System.Windows.Forms.Button();
@@ -58,8 +58,8 @@
             this.BMICalculatorTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.1076F));
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.ImperialRadioButton, 0, 0);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.HeightLabel, 0, 1);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.HeigthTextBox, 1, 2);
-            this.BMICalculatorTableLayoutPanel.Controls.Add(this.WeigthTextBox, 1, 4);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.HeightTextBox, 1, 2);
+            this.BMICalculatorTableLayoutPanel.Controls.Add(this.WeightTextBox, 1, 4);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.WeightLabel, 0, 3);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.ResetButton, 0, 6);
             this.BMICalculatorTableLayoutPanel.Controls.Add(this.CalculateButton, 2, 6);
@@ -116,29 +116,31 @@
             this.HeightLabel.Text = "My Height";
             this.HeightLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // HeigthTextBox
+            // HeightTextBox
             // 
-            this.HeigthTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.HeightTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeigthTextBox, 2);
-            this.HeigthTextBox.Location = new System.Drawing.Point(63, 83);
-            this.HeigthTextBox.Name = "HeigthTextBox";
-            this.HeigthTextBox.Size = new System.Drawing.Size(112, 38);
-            this.HeigthTextBox.TabIndex = 3;
-            this.HeigthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.HeightTextBox, 2);
+            this.HeightTextBox.Location = new System.Drawing.Point(63, 83);
+            this.HeightTextBox.Name = "HeightTextBox";
+            this.HeightTextBox.Size = new System.Drawing.Size(112, 38);
+            this.HeightTextBox.TabIndex = 3;
+            this.HeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
             // 
-            // WeigthTextBox
+            // WeightTextBox
             // 
-            this.WeigthTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.WeightTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.WeigthTextBox, 2);
-            this.WeigthTextBox.Location = new System.Drawing.Point(63, 163);
-            this.WeigthTextBox.Name = "WeigthTextBox";
-            this.WeigthTextBox.Size = new System.Drawing.Size(112, 38);
-            this.WeigthTextBox.TabIndex = 3;
-            this.WeigthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BMICalculatorTableLayoutPanel.SetColumnSpan(this.WeightTextBox, 2);
+            this.WeightTextBox.Location = new System.Drawing.Point(63, 163);
+            this.WeightTextBox.Name = "WeightTextBox";
+            this.WeightTextBox.Size = new System.Drawing.Size(112, 38);
+            this.WeightTextBox.TabIndex = 4;
+            this.WeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.WeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightTextBox_KeyPress);
             // 
             // WeightLabel
             // 
@@ -163,7 +165,7 @@
             this.ResetButton.Location = new System.Drawing.Point(3, 213);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(96, 44);
-            this.ResetButton.TabIndex = 9;
+            this.ResetButton.TabIndex = 6;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = false;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
@@ -179,7 +181,7 @@
             this.CalculateButton.Location = new System.Drawing.Point(105, 213);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(193, 44);
-            this.CalculateButton.TabIndex = 9;
+            this.CalculateButton.TabIndex = 5;
             this.CalculateButton.Text = "Calculate BMI";
             this.CalculateButton.UseVisualStyleBackColor = false;
             this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
@@ -268,6 +270,7 @@
             this.ScaleTextBox.Name = "ScaleTextBox";
             this.ScaleTextBox.Size = new System.Drawing.Size(295, 38);
             this.ScaleTextBox.TabIndex = 10;
+            this.ScaleTextBox.Tag = "";
             this.ScaleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ResultTimer
@@ -289,6 +292,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI Calculator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculator_FormClosing);
+            this.Load += new System.EventHandler(this.BMICalculator_Load);
             this.BMICalculatorTableLayoutPanel.ResumeLayout(false);
             this.BMICalculatorTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -301,9 +305,9 @@
         private System.Windows.Forms.RadioButton ImperialRadioButton;
         private System.Windows.Forms.RadioButton MetricRadioButton;
         private System.Windows.Forms.Label HeightLabel;
-        private System.Windows.Forms.TextBox HeigthTextBox;
+        private System.Windows.Forms.TextBox HeightTextBox;
         private System.Windows.Forms.Label HeightUnitLabel;
-        private System.Windows.Forms.TextBox WeigthTextBox;
+        private System.Windows.Forms.TextBox WeightTextBox;
         private System.Windows.Forms.Label WeightLabel;
         private System.Windows.Forms.Label WeightUnitLabel;
         private System.Windows.Forms.Label ResultLabel;
